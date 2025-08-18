@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body bgcolor="CDCDCD">
+    <center>
+    <h1>◌-Lanchonete Seu Zé-◌</h1>
+    <hr>
+    <h3> Peça seu lanche!🍔🍕 </h3>
+    </center>
+
+    <form action = "" method="">
+        <p>
+        <label for="nome"> Nome Completo </label>
+        <input type = "text" id = "nome" placeholder = "Insira seu nome" required/>
+        </p>
+        <p>
+            <label for = "datanasc"> Data de Nascimento </label>
+            <input type = "date" id = "datanasc"/>
+        </p>
+        <p>
+            <label for = "indica"> Quanto você nos indicaria? </label>
+            <input type = "number" min = "1" max = "5" id = "indica" />
+        </p>
+        <p>
+            <label for = "email"> E-mail </label>
+            <input type = "email" id = "email" placeholder = "Insira seu E-mail" required/>
+        </p>
+        <p>
+            <label for = "cor"> Cor Favorita </label>
+            <input type = "color" id = "cor"/>
+        </p>
+        <p>
+            <label for = "volume"> Em qual volume você ouve música (0 a 100)? </label>
+            <input type = "range" min = "0" max = "100" value = "50" oninput = "valorVolume.textContent = this.value" id = "volume"/>
+            <span id = "valorVolume">50</span>
+            <style>
+                #volume{
+                    accent-color:rgb(13, 13, 130);
+                }
+            </style>
+        </p>
+        <fieldset>
+            <legend>Gênero</legend>
+            <input type = "radio" id = "masc" name = "genero"/>
+            <label for = "masc">Masculino</label>
+            <style>
+                #masc{
+                    accent-color:rgb(255, 0, 0);
+                }
+            </style>
+            <input type = "radio" id = "fem" name = "genero"/>
+            <label for = "fem">Feminino</label>
+            <style>
+                #fem{
+                    accent-color:rgb(255, 0, 187);
+                }
+            </style>
+            <input type = "radio" id = "outro" name = "genero"/>
+            <label for = "outro">Outros</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Monte seu lanche!</legend>
+            <input type = "checkbox" id = "hamb"/>
+            <label for = "hamb" >Hamburguer</label>
+            <style>
+                #hamb{
+                    accent-color:rgb(125, 54, 11);
+                }
+            </style>
+            <!------------------------------------->
+            <input type = "checkbox" id = "bacon"/>
+            <label for = "bacon" >Bacon</label>
+            <style>
+                #bacon{
+                    accent-color:rgb(196, 16, 16);
+                }
+            </style>
+            <!------------------------------------->
+            <input type = "checkbox" id = "AL"/>
+            <label for = "AL" >Alface</label>
+            <style>
+                #AL{
+                    accent-color:rgb(21, 255, 0);
+                }
+            </style>
+            <!------------------------------------->
+            <input type = "checkbox" id = "tomate"/>
+            <label for = "tomate" >Tomate</label>
+            <style>
+                #tomate{
+                    accent-color:rgb(255, 0, 0);
+                }
+            </style>
+            <!------------------------------------->
+            <input type = "checkbox" id = "Cebola"/>
+            <label for = "Cebola" >Cebola Roxa</label>
+            <style>
+                #Cebola{
+                    accent-color:rgb(136, 0, 255);
+                }
+            </style>
+            <!------------------------------------->
+            <input type = "checkbox" id = "ovo"/>
+            <label for = "ovo" >Ovo</label>
+            <style>
+                #ovo{
+                    accent-color:rgb(179, 203, 27);
+                }
+            </style>
+            <!------------------------------------->
+            <input type = "checkbox" id = "qj"/>
+            <label for = "qj" >Queijo</label>
+            <style>
+                #qj{
+                    accent-color:rgb(221, 255, 0);
+                }
+            </style>
+            <!------------------------------------->
+            <input type = "checkbox" id = "Pimenta"/>
+            <label for = "Pimenta" >Pimenta</label>
+            <style>
+                #Pimenta{
+                    accent-color:rgb(255, 0, 0);
+                }
+            </style>
+            <!------------------------------------->
+        </fieldset>
+        <fieldset>
+            <legend>Monte seu lanche!</legend>
+            <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRBlbOk0Qeq0drkOh4gTsAzX8-4HbeyLLp7g&s" height="150" width="100">
+            <input type = "checkbox" id = "coca"/>
+            <label for = "coca" >Coca - Cola</label>
+            <style>
+                #coca{
+                    accent-color:rgb(125, 54, 11);
+                }
+            </style>
+            <br><br>
+            <!------------------------------------->
+             <img src = "https://apoioentrega.vteximg.com.br/arquivos/ids/823495/1465_1.png?v=638555297672430000" height="150" width="100">
+            <input type = "checkbox" id = "Pepsi"/>
+            <label for = "Pepsi" >Pepsi</label>
+            <style>
+                #Pepsi{
+                    accent-color:rgb(31, 7, 255);
+                }
+            </style>
+            <br><br>
+            <!------------------------------------->
+            <img src = "https://www.drogaraia.com.br/_next/image?url=https%3A%2F%2Fproduct-data.raiadrogasil.io%2Fimages%2F3710610.webp&w=3840&q=40" height="150" width="100">
+            <input type = "checkbox" id = "Agua"/>
+            <label for = "Agua" >Agua</label>
+            <style>
+                #Agua{
+                    accent-color:rgba(21, 255, 0, 0);
+                }
+            </style>
+            <br><br>
+            <!------------------------------------->
+            <img src = "https://images.tcdn.com.br/img/img_prod/1042637/chopp_de_vinho_tinto_draft_red_forbes_600ml_185_1_955e1abe7f0a5c19102cc5479a9926a8.png" height="150" width="100">
+            <input type = "checkbox" id = "Chopp"/>
+            <label for = "Chopp" >Chopp de Vinho</label>
+            <style>
+                #Chopp{
+                    accent-color:rgb(176, 7, 206);
+                }
+            </style>
+            <br><br>
+            <!------------------------------------->
+            <img src = "https://www.imigrantesbebidas.com.br/bebida/images/products/full/2894-agua-mineral-crystal-com-gas-500ml.jpg" height="150" width="100">
+            <input type = "checkbox" id = "gas"/>
+            <label for = "gas" >Agua com gás</label>
+            <style>
+                #gas{
+                    accent-color:rgb(0, 247, 255);
+                }
+            </style>
+            <br><br>
+            <!------------------------------------->
+        </fieldset>
+        <form action = "" method=""></form>
+            <label for = "info">Informações Adicionais</label>
+            <textarea id = "info"></textarea>
+            <br>
+            <label for = "info">Informe sua cidade</label>
+            <select id = "cidade">
+                <option> Jaguariuna </option>
+                <option> Amparo </option>
+                <option> Serra Negra </option>
+            </select>
+        </form>
+    </form>
+</body>
+</html>

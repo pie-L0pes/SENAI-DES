@@ -1,0 +1,90 @@
+body{
+    background: url(fundo.jpg) no-repeat; 
+    background-size: cover;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header{
+    background-color: rgba(193, 186, 186, 0.759);
+    padding: 10px;
+    text-align: center;
+}
+
+header h1{
+    margin:0;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+nav ul li{
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: rgb(55, 9, 9);
+    text-decoration: none;
+    text-shadow: 3px red 5px 5px;
+}
+
+.banner{
+    padding: 50px;
+    text-align: center;
+    background-color: rgba(149, 145, 145, 0.759);
+}
+
+.shadow-dance-text{
+    font-size: 4rem;
+    color: rgb(255, 251, 251);
+    text-shadow: 5px 5px 0 #631313, 10px 10px 0 #a42a2a;
+    animation: shadow-dance 2s infinite;
+}
+
+@keyframes shadow-dance {
+    0%, 100% {
+        text-shadow: 5px 5px 0  #631313, 10px 10px 0 #a42a2a;
+    }
+    50% {
+        text-shadow: -5px -5px 0 #631313, -10px -10px 0 #a42a2a;;
+    }
+}
+
+section{
+    padding:10px;
+    margin:0 5px;
+}
+
+.cartao{
+    border : 1px solid white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width:200px;
+    vertical-align: top;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0,3s, ease, box-shadow 0,3s ease;
+}
+
+.cartao:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+.cartao img{
+    width: 100%;
+    border-radius: 8px;
+}
+
+#titulo{
+
+    text-align: center;
+    color: white;
+}
