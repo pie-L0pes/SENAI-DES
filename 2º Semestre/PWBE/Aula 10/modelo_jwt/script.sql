@@ -1,0 +1,19 @@
+DROP DATABASE IF EXISTS modelo_jwt;
+CREATE DATABASE modelo_jwt;
+USE modelo_jwt;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(100) NOT NULL,
+    cargo VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE posts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    titulo VARCHAR(200) NOT NULL,
+    conteudo TEXT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);

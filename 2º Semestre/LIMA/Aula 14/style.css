@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d0d0d;
+    color: #f1f1f1;
+    line-height: 1.5;
+}
+
+header{
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #111, #1c1c1c);
+    color: #f5c518;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05)
+}
+
+header h1{
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+#lista-filmes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1));
+    gap: 20px;
+    padding: 30px;
+}
+
+.card{
+    background: #1c1c1c;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: tranform 0.25s ease;
+    box-shadow: 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    position: relative;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(245, 197, 24, 0.3);
+}
+
+.media-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-bottom: 3px solid #f5c518;
+    background: #000;
+}
+
+.media-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.media-container iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.card h3{
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.card p{
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.estrelas{
+    color:#f5c518;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+#formulario{
+    background: #1a1a1a;
+    padding: 25px;
+    margin: 20px auto 50px;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(255, 255, 255, 0.1);
+}
+
+#formulario form{
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+
+#formulario input,
+#formulario button{
+    padding: 12px;
+    border:none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+#formulario input{
+    background: #2a2a2a;
+    color: #fff;
+}
+
+#formulario input ::placeholder{
+    color: #aaa;
+}
+
+#formulario button{
+    background: #f5c518;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#formulario button:hover{
+    background: #ffdb4d;
+}

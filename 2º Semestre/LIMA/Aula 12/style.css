@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, "Consolas";
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+#logo {
+    width: 45px;
+    height: auto;
+    border-radius: 7px;
+}
+
+#user {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.titulo {
+    background-color: #D9D9D9;
+    border-radius: 25px;
+    padding: 0.7rem;
+    margin: 0.5rem;
+    font-family: "Consolas";
+    color: #4A4848;
+    font-size: 16px;
+    width: 370px;
+}
+
+.chamados {
+    background: #672224;
+    color: #fff;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    overflow-y: auto; 
+    max-height: 400px; 
+}
+
+.chamado {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+    margin-top: 1.5rem;
+}
+
+.chamado img {
+    width: 55px;
+    height: 55px;
+}
+
+.chamado .texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.chamados::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chamados::-webkit-scrollbar-thumb {
+    background-color: #6e5b83;
+    border-radius: 10px;
+}
+
+.chamados::-webkit-scrollbar-track {
+    background-color: #dff3fb;
+    border-radius: 10px;
+}
+
+.mais img{
+    margin: 1rem;
+    width: 90%;
+}

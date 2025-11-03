@@ -1,0 +1,13 @@
+CREATE TABLE pacientes (
+  id INT PRIMARY KEY,
+  nome VARCHAR(100),
+  nascimento DATE
+);
+
+CREATE TABLE consultas (
+  id INT PRIMARY KEY,
+  paciente_id INT,
+  data_consulta DATE,
+  valor DECIMAL(10,2),
+  FOREIGN KEY (paciente_id) REFERENCES pacientes(id)
+);

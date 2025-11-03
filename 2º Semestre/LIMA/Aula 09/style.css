@@ -1,0 +1,153 @@
+body{
+    font-family:'Segoe UI', sans-serif;
+    margin:0;
+    background-color: #e2e4e8;
+    color: #333;
+}
+
+header{
+    background: rgb(0, 155, 155);
+    color: #005053;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1{
+    margin: 0%;
+    font-size: 28px;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.tabela{
+    width:90%;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden; 
+    padding: 1.5rem;
+}
+
+.tabela h2{
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: rgb(0, 155, 155);
+    color: #fff;
+}
+
+thead th{
+    padding: 14px;
+    text-align: left;
+    font-size: 16px;
+}
+
+td img{
+    width: 60px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+tbody tr:nth-child(odd){
+    background-color: #fef9e7;
+}
+
+tbody tr:nth-child(even){
+    background-color: #fffdf4;
+}
+
+tbody td{
+    padding:  12px 14px;
+    font-size: 15px;
+}
+
+tbody td a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+tbody td a:hover{
+    color: #00d2d9;
+    text-decoration: underline;
+}
+
+tbody tr{
+    transition: backgound 0.3s, transform 0.2s;
+}
+
+tbody tr:hover{
+    transform: scale(1.01);
+    filter: brightness(o.95);
+}
+
+.preco{
+    color: rgb(19, 88, 85);
+    font-weight: bold;
+}
+
+.estoque.baixo{
+    color:red;
+}
+
+.estoque.alto{
+    color:rgb(39, 212, 47);
+}
+
+footer{
+    background: #00696c;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.imagem img{
+    width: 500px;
+    height: auto;
+}
+
+.voltar a{
+    background: #686868;
+    padding: 1rem 1.5rem;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.voltar{
+    margin: 2rem;
+}

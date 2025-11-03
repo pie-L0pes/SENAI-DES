@@ -1,0 +1,680 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1755784950069
+  modified: 1755784950069
+  description: ""
+collection:
+  - name: Biblioteca
+    meta:
+      id: fld_62756991ab974df7afc81d935612000a
+      created: 1755785834954
+      modified: 1755785834954
+      sortKey: -1755785834954
+      description: ""
+    children:
+      - name: Usuarios
+        meta:
+          id: fld_32fa22e3fab948858ae46cb1265f3823
+          created: 1755785862967
+          modified: 1755785862967
+          sortKey: -1755785862967
+          description: ""
+      - name: Livros
+        meta:
+          id: fld_1b76395d168c44a688a99dbc9706174a
+          created: 1756390143585
+          modified: 1756390143585
+          sortKey: -1756390143585
+          description: ""
+  - name: Mecanica
+    meta:
+      id: fld_0ebc3442ab7448e4b06f0cf70ffca604
+      created: 1756993951488
+      modified: 1756993951488
+      sortKey: -1756993951488
+      description: ""
+    children:
+      - name: Veiculos
+        meta:
+          id: fld_e94b5cbb0a2c4652827fb96a1b7091ad
+          created: 1756993985709
+          modified: 1756993985709
+          sortKey: -1756993985709
+          description: ""
+      - name: Manutenções
+        meta:
+          id: fld_a3bbeeeba86b43ce8ec0125572deedd4
+          created: 1756994009505
+          modified: 1756994009505
+          sortKey: -1756994009505
+          description: ""
+      - name: Contratos
+        meta:
+          id: fld_1145bebb43e2459e813c246094567f53
+          created: 1756994020175
+          modified: 1756994020175
+          sortKey: -1756994020175
+          description: ""
+  - name: Comercio
+    meta:
+      id: fld_571693c6995047e2ab4968598af85cf6
+      created: 1758197241396
+      modified: 1758197241396
+      sortKey: -1758197241396
+      description: ""
+    children:
+      - name: Clientes
+        meta:
+          id: fld_fd75458e6abb483397e67a0b280edda3
+          created: 1756993971335
+          modified: 1758202237499
+          sortKey: -1758200223996
+          description: ""
+      - name: Produtos
+        meta:
+          id: fld_092cdf506b3c4ec9a68f25640914c933
+          created: 1758200212924
+          modified: 1758202229640
+          sortKey: -1758200223896
+          description: ""
+      - name: Pedidos
+        meta:
+          id: fld_99561f20c4d7403b9fa78be42ab65322
+          created: 1758200223796
+          modified: 1758200223796
+          sortKey: -1758200223796
+          description: ""
+  - name: Locadora
+    meta:
+      id: fld_dc47090c604d45669e72e52e02d72faa
+      created: 1758807597186
+      modified: 1758807597186
+      sortKey: -1758807597186
+      description: ""
+    children:
+      - name: clientes
+        meta:
+          id: fld_00d80ab0700940a4b6c6a17eb8e800d3
+          created: 1759758482316
+          modified: 1759758482316
+          sortKey: -1759758482316
+          description: ""
+        children:
+          - name: Total gastos
+            meta:
+              id: fld_f54a9550dcd94883a96ded1638062f77
+              created: 1759760110507
+              modified: 1759760110507
+              sortKey: -1759760110507
+              description: ""
+      - name: filmes
+        meta:
+          id: fld_f7c29fd22a044a189d1dcb2bd0f60c02
+          created: 1759758515420
+          modified: 1759758515420
+          sortKey: -1759758515420
+          description: ""
+      - name: locacoes
+        meta:
+          id: fld_09f6e46405a0421f985d2e88ebcce07e
+          created: 1759758536688
+          modified: 1759758536688
+          sortKey: -1759758536688
+          description: ""
+  - name: Loja espostiva
+    meta:
+      id: fld_4f4660bde6c04c23b381e5154e63071e
+      created: 1760025197732
+      modified: 1760025197732
+      sortKey: -1760025197732
+      description: ""
+    children:
+      - name: Equipamentos
+        meta:
+          id: fld_23db6e4328224bf2b8001f6952bb77fc
+          created: 1760025219541
+          modified: 1760025219541
+          sortKey: -1760025219541
+          description: ""
+      - name: pedidos
+        meta:
+          id: fld_4f33c047f9164e36af1842d01cb107ec
+          created: 1760039902019
+          modified: 1760039902019
+          sortKey: -1760039902019
+          description: ""
+  - name: Teste
+    meta:
+      id: fld_b75d66bd07b4427cb67039170952661a
+      created: 1760986753023
+      modified: 1760986753023
+      sortKey: -1760986753023
+      description: ""
+  - name: Vida A+
+    meta:
+      id: fld_f34ef4da858c49e18a7d9a14b9320904
+      created: 1761738988469
+      modified: 1761738988469
+      sortKey: -1761738988469
+      description: ""
+    children:
+      - name: Pacientes
+        meta:
+          id: fld_637cea359946441b92eb27cae7e98aa2
+          created: 1761820736089
+          modified: 1761820736089
+          sortKey: -1761820736089
+          description: ""
+        children:
+          - url: http://localhost:3000/paciente
+            name: Cadastrar
+            meta:
+              id: req_d59b27dd9a9e438aa4b3a8ddb1c5d0a9
+              created: 1761820821064
+              modified: 1762170859003
+              isPrivate: false
+              description: ""
+              sortKey: -1761820821064
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"nome": "alex",
+                	"email": "alex@gamil",
+                	"telefone": "123456789", 
+                	"cpf": "12345678910",
+                	"endereco": "rua"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_9449bfce035b4d859bc38be970cb4690
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_017bdf3b88bb4c539abda618dbadd521
+              - id: pair_499e2aae2ca64d8f9612a5e28c9f1dff
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibm9tZSI6InRlc3RlIiwiY2FyZ28iOiJhZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzYyMTY4NTQ1LCJleHAiOjE3NjIxNzIxNDV9.K-ZPm-zgpmIswnrlmE27KlqQXyrMW9lNXoqG_iMalWk
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pacientes/4
+            name: Excluir
+            meta:
+              id: req_99021bc4a1d14300b721b2a2b453d832
+              created: 1761820823810
+              modified: 1762170702083
+              isPrivate: false
+              description: ""
+              sortKey: -1761820823810
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_d7d4f00e746b4e8484abf581e32643eb
+              - id: pair_9ce67463719a499e8c7f939cb423275c
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibm9tZSI6InRlc3RlIiwiY2FyZ28iOiJhZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzYyMTY4NTQ1LCJleHAiOjE3NjIxNzIxNDV9.K-ZPm-zgpmIswnrlmE27KlqQXyrMW9lNXoqG_iMalWk
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pacientes
+            name: Listar
+            meta:
+              id: req_f6ddbc325d7942dfa6c1adc53c53ec26
+              created: 1761820826936
+              modified: 1761820916039
+              isPrivate: false
+              description: ""
+              sortKey: -1761820826936
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Medicos
+        meta:
+          id: fld_8df5e76101f54c4f804408be80e40c1a
+          created: 1761820753007
+          modified: 1761820753007
+          sortKey: -1761820753007
+          description: ""
+        children:
+          - url: http://localhost:3000/medico
+            name: Cadastrar
+            meta:
+              id: req_3fab208398824765af9b0bcf7b031869
+              created: 1761821439811
+              modified: 1762170618316
+              isPrivate: false
+              description: ""
+              sortKey: -1761821439811
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": "5",
+                	"nome": "Alexandre",
+                	"email": "alexandre@gmail.com",
+                	"telefone": "123456789",
+                	"cpf": "12345678910",
+                	"endereco": "rua tal, jhardukaus",
+                	"especialidade": "cirurgião geral"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_18e2873f78d94e789c553dd9a0c9cc84
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_d039bcfca69b45d095cbb6f5b76cf5d2
+              - id: pair_1dcd85e17d7c49199c931727f788ba4c
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibm9tZSI6InRlc3RlIiwiY2FyZ28iOiJhZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzYyMTY4NTQ1LCJleHAiOjE3NjIxNzIxNDV9.K-ZPm-zgpmIswnrlmE27KlqQXyrMW9lNXoqG_iMalWk
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/medicos/5
+            name: Excluir
+            meta:
+              id: req_a984024baf984e9e921cff5e5bc88146
+              created: 1761821445326
+              modified: 1762170626195
+              isPrivate: false
+              description: ""
+              sortKey: -1761821445326
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_32d0d52e773f454481e92eba837931d4
+              - id: pair_4fb845f3b9c34f44b41dc303f6c5956d
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibm9tZSI6InRlc3RlIiwiY2FyZ28iOiJhZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzYyMTY4NTQ1LCJleHAiOjE3NjIxNzIxNDV9.K-ZPm-zgpmIswnrlmE27KlqQXyrMW9lNXoqG_iMalWk
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/medicos
+            name: Listar
+            meta:
+              id: req_a2990b5b567f41cb9bf4e367b8891ca3
+              created: 1761821449435
+              modified: 1762170312289
+              isPrivate: false
+              description: ""
+              sortKey: -1761821449435
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_08e27bd23fbc4b3d9a8aa30cc8a6e149
+              - id: pair_2ac07388fcac4961ada3aa2ebe3b68b2
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibm9tZSI6InRlc3RlIiwiY2FyZ28iOiJhZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzYyMTY4NTQ1LCJleHAiOjE3NjIxNzIxNDV9.K-ZPm-zgpmIswnrlmE27KlqQXyrMW9lNXoqG_iMalWk
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Consultas
+        meta:
+          id: fld_a534c7566a6347efb7280b7e496aabb2
+          created: 1761820792542
+          modified: 1761820792542
+          sortKey: -1761820792543
+          description: ""
+        children:
+          - url: http://localhost:3000/consulta
+            name: Cadastrar
+            meta:
+              id: req_374e0835893b4e6c96fce8752c898fdc
+              created: 1761821496540
+              modified: 1762170084770
+              isPrivate: false
+              description: ""
+              sortKey: -1761821496540
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"idCliente": "1",
+                	"idMedico": "3",
+                	"data": "2025-12-01",
+                	"hora": "12:00",
+                	"status": "agendada"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_8b9161ad0a564b80a10caaffbbaee4a0
+              - id: pair_9defdd48bc364564b181b4d349af9b19
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibm9tZSI6InRlc3RlIiwiY2FyZ28iOiJhZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzYyMTY4NTQ1LCJleHAiOjE3NjIxNzIxNDV9.K-ZPm-zgpmIswnrlmE27KlqQXyrMW9lNXoqG_iMalWk
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/consultas/1
+            name: Excluir
+            meta:
+              id: req_13260add504c4f049c63f4a1d9580e33
+              created: 1761821499657
+              modified: 1762168678952
+              isPrivate: false
+              description: ""
+              sortKey: -1761821499657
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_b1fdfa3a451145aa836ef3963c482c59
+              - id: pair_a65a20e3f5d648bb8af8bb2431e8d24f
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibm9tZSI6InRlc3RlIiwiY2FyZ28iOiJhZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzYyMTY4NTQ1LCJleHAiOjE3NjIxNzIxNDV9.K-ZPm-zgpmIswnrlmE27KlqQXyrMW9lNXoqG_iMalWk
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/consultas/1
+            name: Listar consulta por medico
+            meta:
+              id: req_95d5b1ee87f84450928fb97f446080af
+              created: 1761821501888
+              modified: 1762169752398
+              isPrivate: false
+              description: ""
+              sortKey: -1761821501888
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_e94316f90af5403fb3095e0daf81bbed
+              - id: pair_881c3cf44c384a71a3b50142f368877c
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibm9tZSI6InRlc3RlIiwiY2FyZ28iOiJhZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzYyMTY4NTQ1LCJleHAiOjE3NjIxNzIxNDV9.K-ZPm-zgpmIswnrlmE27KlqQXyrMW9lNXoqG_iMalWk
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Relatórios
+        meta:
+          id: fld_f07e3b32b82245da89cd48cb6c40f085
+          created: 1761820810245
+          modified: 1761829869284
+          sortKey: -1761820810245
+          description: ""
+        children:
+          - url: http://localhost:3000/lista/geral
+            name: Lista geral
+            meta:
+              id: req_e0ee82d4c6644b8788e8f2ae6e3d1c87
+              created: 1761821604877
+              modified: 1762169178290
+              isPrivate: false
+              description: ""
+              sortKey: -1761821604877
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_f04c0a3b430d47fea1ccb9a4ec7fa2f6
+              - id: pair_d778f022bdf346f294e6731d4a417307
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibm9tZSI6InRlc3RlIiwiY2FyZ28iOiJhZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzYyMTY4NTQ1LCJleHAiOjE3NjIxNzIxNDV9.K-ZPm-zgpmIswnrlmE27KlqQXyrMW9lNXoqG_iMalWk
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/pacientes/medicos
+            name: Listar Pacientes por medico
+            meta:
+              id: req_8209bfb54668415ea79a724964fa1abf
+              created: 1761821607320
+              modified: 1762169374214
+              isPrivate: false
+              description: ""
+              sortKey: -1761821607320
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_916eeb726ccd452d8577890e5a3c73af
+              - id: pair_4ed0fa642d3d4fcea77d4fd1e5806592
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibm9tZSI6InRlc3RlIiwiY2FyZ28iOiJhZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzYyMTY4NTQ1LCJleHAiOjE3NjIxNzIxNDV9.K-ZPm-zgpmIswnrlmE27KlqQXyrMW9lNXoqG_iMalWk
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/consultas/relatorio
+            name: Listar consultas por especilalidade
+            meta:
+              id: req_1de83f0acab8483f97e058c711544eca
+              created: 1761821609772
+              modified: 1762169637772
+              isPrivate: false
+              description: ""
+              sortKey: -1761821609772
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_a16297b2bf874c57b5dc3f82e1d17db8
+              - id: pair_c997068edab0405e9d13c8acb7eb6c26
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibm9tZSI6InRlc3RlIiwiY2FyZ28iOiJhZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzYyMTY4NTQ1LCJleHAiOjE3NjIxNzIxNDV9.K-ZPm-zgpmIswnrlmE27KlqQXyrMW9lNXoqG_iMalWk
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Login
+        meta:
+          id: fld_a8ccfc16b18d478286e4b44f30a7f488
+          created: 1761822159679
+          modified: 1761822159679
+          sortKey: -1761822159679
+          description: ""
+        children:
+          - url: http://localhost:3000/login
+            name: Login
+            meta:
+              id: req_f5fcf0cf3b0f4a2282a593a42ea2a1c0
+              created: 1761823656123
+              modified: 1762167729508
+              isPrivate: false
+              description: ""
+              sortKey: -1761823656123
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                "email":"teste@gmail.com",
+                "senha": "1234"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_214ffdc92b3f435a998e55b6f4d0dd30
+              - id: pair_27e6793140ee486ea0335b6007dcae0c
+                name: Authorization
+                value: ""
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/register
+            name: Cadastrar
+            meta:
+              id: req_48f993fbda694f6eb5842c93073f46a2
+              created: 1761823703441
+              modified: 1762170577954
+              isPrivate: false
+              description: ""
+              sortKey: -1761823703441
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                "nome": "teste",
+                "email":"teste@gmail.com",
+                "senha": "1234",
+                "cargo":"Medico"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/users
+            name: Listar
+            meta:
+              id: req_be97f88b7ba34ecfb45267298cc4c38f
+              created: 1761831924998
+              modified: 1762169062950
+              isPrivate: false
+              description: ""
+              sortKey: -1761831924998
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.2
+                id: pair_64c15f03885b4739a26a6f67730593b8
+              - id: pair_428dbdb6b7cc46c2a4ad4bcd513f3f84
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwibm9tZSI6InRlc3RlIiwiY2FyZ28iOiJhZG1pbmlzdHJhZG9yIiwiaWF0IjoxNzYyMTY4NTQ1LCJleHAiOjE3NjIxNzIxNDV9.K-ZPm-zgpmIswnrlmE27KlqQXyrMW9lNXoqG_iMalWk
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1755785163498
+    modified: 1755785163498
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1755785163336
+    modified: 1755785163336
+    isPrivate: false

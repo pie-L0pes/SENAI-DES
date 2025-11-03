@@ -1,0 +1,12 @@
+CREAT TABLE departamento (
+  id INT PRIMARY KEY,
+  nome VARCHA(100)
+)
+
+CREAT TABLE funcionarios (
+  id INT PRIMARI,
+  nome,
+  cargo VARCHAR(50),
+  departamento INT
+  FOREGIN KEY (departamento) REFERENCE departamento(id)
+)
