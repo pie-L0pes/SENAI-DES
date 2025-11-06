@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4682b4;
+  padding: 10px 20px;
+  color: white;
+}
+
+.voltar {
+    background: #77b8ee;
+    border-radius: 14px;
+    padding: 1rem;
+}
+
+.voltar a {
+    text-decoration: none;
+    color: black;
+}
+
+.voltar:hover {
+    background-color: rgb(255, 142, 101);
+}
+
+
+.linha-topo {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.caixa-radio {
+  margin: 20px;
+  background-color: #ffffff;
+  border: 2px solid #4682b4;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+}
+
+.caixa-radio h2 {
+  color: #2e5984;
+  margin-bottom: 15px;
+}
+
+.caixa-radio p {
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.frequencia-visual {
+  margin-top: 40px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.frequencia-visual h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.onda-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  height: 100px;
+}
+
+.onda {
+  width: 40px;
+  background-color: #4db8ff;
+  animation: pulsar 1.5s infinite ease-in-out;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.onda span {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.onda:nth-child(1) {
+  height: 30%;
+  animation-delay: 0s;
+}
+.onda:nth-child(2) {
+  height: 50%;
+  animation-delay: 0.2s;
+}
+.onda:nth-child(3) {
+  height: 70%;
+  animation-delay: 0.4s;
+}
+.onda:nth-child(4) {
+  height: 90%;
+  animation-delay: 0.6s;
+}
+
+@keyframes pulsar {
+  0%, 100% {
+    transform: scaleY(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scaleY(1.3);
+    opacity: 1;
+  }
+}
+
+.tv-frequencia {
+  margin-top: 40px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tv-frequencia h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.tv-ondas-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  height: 120px;
+}
+
+.tv-onda {
+  width: 50px;
+  background-color: #ff9933; /* laranja para TV */
+  animation: tv-pulsar 1.5s infinite ease-in-out;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.tv-onda span {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* alturas diferentes para representar faixas */
+.tv-onda:nth-child(1) { height: 40%; animation-delay: 0s; }
+.tv-onda:nth-child(2) { height: 60%; animation-delay: 0.2s; }
+.tv-onda:nth-child(3) { height: 50%; animation-delay: 0.4s; }
+.tv-onda:nth-child(4) { height: 80%; animation-delay: 0.6s; }
+
+@keyframes tv-pulsar {
+  0%, 100% { transform: scaleY(1); opacity: 0.8; }
+  50% { transform: scaleY(1.3); opacity: 1; }
+}
