@@ -9,7 +9,7 @@ const Login = async (req, res) => {
         const senhahash = crypto.createHash('MD5').update(psw).digest('hex').toString();
 
         const usuario = await db.query(
-            "SELECT * FROM users WHERE email = ? AND senha = ? AND cargo = ?",
+            "SELECT * FROM usuarios WHERE email = ? AND senha = ? AND cargo = ?",
             [email, senhahash, cargo]
         );
 
@@ -57,7 +57,7 @@ const cadastrarUsuario = async (req, res) => {
         res.status(201).json(novoUsuario).end();
     } catch (error) {
         console.error(error);
-        res.status(500).json({ message: 'Erro ao cadastrar usuário.', error: error }).end();
+        res.status(500).json({ message: 'Erro ao cadastrar usuario.', error: error }).end();
     }
 };
 

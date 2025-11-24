@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #c7d5e2;
+}
+
+header {
+    display: flex;
+    justify-content: end;
+    padding: 20px 0;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.logo {
+    width: 170px;
+    position: absolute;
+    left: 30px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 80px;
+    margin: 1rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.menu a:hover{
+    color: #34148c;
+}
+
+main {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 40px;
+}
+
+.card {
+    background-color: #5a98a0;
+    border-radius: 25px;
+    padding: 25px;
+    color: rgb(248, 233, 233);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+
+.campo {
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+
+.btn {
+    width: 200px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(215, 204, 204);
+    color: #008ca6;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #adb5b9;
+}
