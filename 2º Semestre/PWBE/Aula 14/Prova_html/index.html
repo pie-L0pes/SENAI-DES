@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="logo.png" class="logo">
+
+        <ul class="menu">
+            <li><a href="index.html" id="salas">Salas</a></li>
+            <li><a href="alunos.html">Alunos</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+    </header>
+
+    <main>
+
+        <div class="card">
+            <h3>Cadastrar Sala</h3>
+
+            <input type="text" class="campo" placeholder="Nome">
+            <input type="number" class="campo" placeholder="Capacidade" min="1">
+
+            <button class="btn">Cadastrar</button>
+        </div>
+
+        <div class="card tabela-card">
+            <h3>Salas Cadastradas</h3>
+
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Capacidade</th>
+                        <th>Total de Reservas</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Sala Vermelha</td>
+                        <td>17</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Sala Azul</td>
+                        <td>7</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+</body>
+</html>

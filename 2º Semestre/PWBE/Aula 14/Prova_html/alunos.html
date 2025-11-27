@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="logo.png" class="logo">
+
+        <ul class="menu">
+            <li><a href="index.html">Salas</a></li>
+            <li><a href="alunos.html" id="alunos">Alunos</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+    </header>
+
+    <main>
+
+        <div class="card">
+            <h3>Cadastrar Aluno</h3>
+
+            <input type="text" class="campo" placeholder="Nome">
+            <input type="text" class="campo" placeholder="Turma">
+
+            <button class="btn">Cadastrar</button>
+        </div>
+
+        <div class="card tabela-card">
+            <h3>Salas Cadastradas</h3>
+
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Turma</th>
+                        <th>Total de Reservas</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Pietra Vitória</td>
+                        <td>2A EM</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Melina Lopes</td>
+                        <td>1A EM</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+</body>
+</html>

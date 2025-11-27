@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="logo.png" class="logo">
+
+        <ul class="menu">
+            <li><a href="index.html">Salas</a></li>
+            <li><a href="alunos.html">Alunos</a></li>
+            <li><a href="reservas.html" id="Reserva">Reservas</a></li>
+        </ul>
+    </header>
+
+    <main>
+
+        <div class="card">
+            <h3>Cadastrar Reserva</h3>
+
+            <input type="date" class="campo" placeholder="Data">
+            <input type="time" class="campo" placeholder="Hora">
+            <input type="text" class="campo" placeholder="Nome do Aluno">
+            <select class="campo">
+                <option value="">Selecione a Sala</option>
+                <option value="Sala Vermelha">Sala Vermelha</option>
+                <option value="Sala Azul">Sala Azul</option>
+                <option value="Sala Rosa">Sala Rosa</option>
+            </select>
+
+            <button class="btn">Cadastrar</button>
+        </div>
+
+        <div class="card tabela-card">
+            <h3>Lista das Reservas</h3>
+
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>ID Reserva</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Nome do Aluno</th>
+                        <th>Sala Vermelha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2025-11-27</td>
+                        <td>10:00</td>
+                        <td>Julia Novo</td>
+                        <td>Sala Azul</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2025-11-27</td>
+                        <td>14:00</td>
+                        <td>Pietra Vitória</td>
+                        <td>Sala Rosa</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+</body>
+</html>
