@@ -26,3 +26,6 @@ git commit -m "a" // Valida as alterações
 
 git push //Envia as alterações
 
+###### //Atualizar repositório local
+
+git pull

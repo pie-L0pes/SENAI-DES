@@ -1,0 +1,14 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model Cliente {
+  id Int @id @default(autoincrement())
+  nome String 
+  endereco String
+}

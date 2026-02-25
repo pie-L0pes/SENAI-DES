@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model Turmas {
+  id         Int      @id @default(autoincrement())
+  nome       String
+  quantidade Int
+  alunos     Alunos[]
+}
+
+model Alunos {
+  id        Int    @id @default(autoincrement())
+  nome      String
+  matricula String
+
+  turmas   Turmas? @relation(fields: [turmasId], references: [id])
+  turmasId Int?
+}
