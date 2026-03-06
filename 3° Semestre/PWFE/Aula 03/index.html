@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🍕 Pizzaria JS</h1>
+    <button onclick="abrirModal()">🛒 Carrinho</button>
+</header>
+
+<main class="grid" id="produtos"></main>
+
+<div id="modalCarrinho" class="modal">
+    <div class="modal-content">
+        <h2>Seu Pedido</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Qtd</th>
+                    <th>Subtotal</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="dados"></tbody>
+        </table>
+        <h3 id="total"></h3>
+        <button onclick="finalizar()">Fazer Pedido</button>
+        <button onclick="fecharModal()">Fechar</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

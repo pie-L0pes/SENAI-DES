@@ -1,106 +1,136 @@
 const prisma = require("../data/prisma");
 
 const listar = async (req, res) => {
-    const turmas = await prisma.turmas.findMany();
-
-    res.json(turmas).status(200).end();
+    const veiculos = await prisma.veiculo.findMany();
+    return res.status(200).json(veiculos);
 };
 
 const buscar = async (req, res) => {
-    const {id} = req.params;
+    const { id } = req.params;
 
-    const veiculo = await prisma.veiculos.findUnique({
+    const veiculo = await prisma.veiculo.findUnique({
         where: { id },
     });
+
+    if (!veiculo) {
+        return res.status(404).json({ mensagem: "Veículo não encontrado" });
+    }
 
     return res.status(200).json(veiculo);
 };
 
 const cadastrar = async (req, res) => {
-    let {placa, modelo, marca, ano } = req.body;
+    let { placa, modelo, marca, ano } = req.body;
 
-    //placa
-    if (!placa){
-        return res.status(400).json({mensagem: "A placa é obrigatória!"});
-    }else if (placa.length !== 7 || placa.includes(" ") === true){
-        return res.status(400).json({mensagem: "Placa invalida!"});
+    if (!placa) {
+        return res.status(400).json({ mensagem: "A placa é obrigatória!" });
+    } else if (placa.length !== 7) {
+        return res.status(400).json({ mensagem: "Placa inválida!" });
+    } else if (placa.includes(" ")) {
+        return res.status(400).json({ mensagem: "Placa inválida!" });
     }
 
     placa = placa.toUpperCase();
 
-    const placaExiste = veiculos.some(veiculos => 
-        veiculos.placa.toUpperCase() === placa
-    );
+    const placaExiste = await prisma.veiculo.findFirst({
+        where: { placa }
+    });
 
-    if (placaExiste){
-        return res.status(400).json({mensagem: "Já existe um carro com essa placa!"});
+    if (placaExiste) {
+        return res.status(400).json({ mensagem: "Já existe um carro com essa placa!" });
     }
 
-    //marca e modelo
-    if (!modelo){
-        return res.status(400).json({mensagem: "O modelo é obrigatório!"});
+    if (!modelo) {
+        return res.status(400).json({ mensagem: "O modelo é obrigatório!" });
     }
 
-    if (!marca){
-        return res.status(400).json({mensagem: "A marca é obrigatória!"});
+    if (!marca) {
+        return res.status(400).json({ mensagem: "A marca é obrigatória!" });
     }
 
-    //ano
-    if (ano.length !== 4){
-        return res.status(400).json({mensagem: "Ano invalido!"});
-    }
-    if (typeof ano !== "number") {
-    return res.status(400).json({ mensagem: "Ano inválido!" });
+    ano = ano.toString();
+
+    if (ano.length !== 4) {
+        return res.status(400).json({ mensagem: "Ano inválido!" });
     }
 
+    const letras = ano.split("").some(c => c < "0" || c > "9");
+    if (letras) {
+        return res.status(400).json({ mensagem: "Ano inválido! Deve conter apenas números" });
+    }
+
+    const novoVeiculo = await prisma.veiculo.create({
+        data: { placa, modelo, marca, ano }
+    });
+
+    return res.status(201).json({ mensagem: "Cadastro realizado com sucesso", veiculo: novoVeiculo });
 };
 
 const atualizar = async (req, res) => {
     const { id } = req.params;
     let { placa, modelo, marca, ano } = req.body;
 
-    // placa
-    if (!placa){
+    const veiculoAtual = await prisma.veiculo.findUnique({
+        where: { id }
+    });
+
+    if (!veiculoAtual) {
+        return res.status(404).json({ mensagem: "Veículo não encontrado" });
+    }
+
+    if (!placa) {
         return res.status(400).json({ mensagem: "A placa é obrigatória!" });
-    } else if (placa.length !== 7 || placa.includes(" ")) {
+    } else if (placa.length !== 7) {
+        return res.status(400).json({ mensagem: "Placa inválida!" });
+    } else if (placa.includes(" ")) {
         return res.status(400).json({ mensagem: "Placa inválida!" });
     }
+
     placa = placa.toUpperCase();
 
-    if (placaExiste){
+    const placaExiste = await prisma.veiculo.findFirst({
+        where: { placa }
+    });
+
+    if (placaExiste) {
         return res.status(400).json({ mensagem: "Já existe um carro com essa placa!" });
     }
 
-    // modelo e marca
-    if (!modelo){
+    if (!modelo) {
         return res.status(400).json({ mensagem: "O modelo é obrigatório!" });
     }
 
-    if (!marca){
+    if (!marca) {
         return res.status(400).json({ mensagem: "A marca é obrigatória!" });
     }
 
-    // ano
-    if (!ano || ano.toString().length !== 4 || isNaN(Number(ano))) {
+    ano = ano.toString();
+
+    if (ano.length !== 4) {
         return res.status(400).json({ mensagem: "Ano inválido!" });
     }
 
-    const veiculoAtualizado = await prisma.veiculos.update({
+    const letras = ano.split("").some(c => c < "0" || c > "9");
+    if (letras) {
+        return res.status(400).json({ mensagem: "Ano inválido! Deve conter apenas números" });
+    }
+
+    const veiculoAtualizado = await prisma.veiculo.update({
         where: { id },
         data: { placa, modelo, marca, ano }
     });
 
-    return res.status(200).json(veiculoAtualizado);
-}
+    return res.status(200).json({ mensagem: "Veículo atualizado com sucesso"});
+};
 
 const apagar = async (req, res) => {
     const { id } = req.params;
 
-    const veiculo = await prisma.veiculos.delete({
-        where: {id}
+    const veiculoRemovido = await prisma.veiculo.delete({
+        where: { id }
     });
 
-    res.json(veiculo).status(200).end();
+    return res.status(200).json({ mensagem: "Veículo removido com sucesso"});
 };
 
 module.exports = {

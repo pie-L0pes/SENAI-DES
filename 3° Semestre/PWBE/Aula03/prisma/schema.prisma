@@ -1,6 +1,5 @@
 generator client {
-  provider = "prisma-client"
-  output   = "../generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -8,11 +7,11 @@ datasource db {
 }
 
 model Clientes {
-  id Int @id @default(autoincrement())
+  id            Int    @id @default(autoincrement())
   nome_completo String
-  cpf Int
-  email String @unique
-  cnh String
+  cpf           String  @unique
+  email         String  @unique
+  cnh           String
 }
 
 model veiculo {

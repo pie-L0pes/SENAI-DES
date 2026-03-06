@@ -57,7 +57,7 @@ th{
     height: 100%;
 }
 
-.modal-content{
+#formCli{
     background: white;
     width: 300px;
     padding: 20px;
