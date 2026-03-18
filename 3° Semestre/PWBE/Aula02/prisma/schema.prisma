@@ -22,3 +22,5 @@ model Alunos {
   turmas   Turmas? @relation(fields: [turmasId], references: [id])
   turmasId Int?
 }
+
+
