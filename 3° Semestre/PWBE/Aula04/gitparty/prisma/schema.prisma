@@ -43,7 +43,7 @@ enum StatusEventos {
 model Incricoes {
   id            Int            @id @default(autoincrement())
   data_incricao DateTime       @default(now())
-  status        StatusIncricao @default(COMFIRMADA)
+  status        StatusIncricao @default(CONFIRMADA)
 
   eventos    Eventos  @relation(fields: [eventosId], references: [id])
   eventosId  Int
@@ -52,7 +52,7 @@ model Incricoes {
 }
 
 enum StatusIncricao {
-  COMFIRMADA
+  CONFIRMADA
   LISTA_ESPERA
   CANCELADA
 }

@@ -1,16 +1,24 @@
 const prisma = require("../data/prisma");
-const { limiteParticipantes } = require("../services/incrições.service");
+const { limiteParticipantes, verificarDuplicidade, verificarPrazoCancelamento, atualizarListaEspera } = require("../services/incrições.service");
 
 const cadastrar = async (req, res) => {
+    try{
     const data = req.body;
 
-    // const item = await prisma.incricoes.create({
-    //     data
-    // });
+    await verificarDuplicidade(data.usuariosId, data.eventosId);
 
-    limiteParticipantes(data.usuariosId, data.eventosId);
+    let status =  await limiteParticipantes(data.usuariosId, data.eventosId);
 
-    res.json({}).status(201).end();
+    data.status = status;
+
+    const inscricao = await prisma.incricoes.create({
+        data
+    });
+
+    res.json(inscricao).status(201).end();
+}catch(error){
+    res.status(500).json(error.toString()).end();
+}
 };
 
 const listar = async (req, res) => {
@@ -42,13 +50,30 @@ const atualizar = async (req, res) => {
 };
 
 const excluir = async (req, res) => {
-    const { id } = req.params;
-    
-    const item = await prisma.incricoes.delete({
-        where: { id : Number(id) }
-    });
+    try {
+        const { id } = req.params;
 
-    res.json(item).status(200).end();
+        const inscricao = await prisma.incricoes.findUnique({
+            where: { id: Number(id) }
+        });
+
+        await verificarPrazoCancelamento(inscricao.eventosId);
+
+        const eraConfirmada = inscricao.status === "CONFIRMADA";
+
+        const item = await prisma.incricoes.delete({
+            where: { id: Number(id) }
+        });
+
+        if (eraConfirmada) {
+            await atualizarListaEspera(inscricao.eventosId);
+        }
+
+        res.json(item).status(200).end();
+
+    } catch (error) {
+        res.status(500).json(error.toString()).end();
+    }
 };
 
 module.exports = {
@@ -58,3 +83,14 @@ module.exports = {
     atualizar,
     excluir
 }
+
+
+// let hoje = new Date();
+// let algumaData = new Date("2026-04-08 10:00");
+
+// // algumaData - hoje -> intervalo em milisegundos
+
+// //Atualização status incrição
+// //cancelar a inscrição
+// // SE status == Confirmada
+// //WHERE  eventosid == id && status == "lista espera" ORDER BY data_incricao
