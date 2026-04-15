@@ -10,6 +10,9 @@ const incricoesRoutes = require('./src/routes/incricoes.routes');
 
 app.use('/incricoes', incricoesRoutes);
 
+const imagemRoutes = require("./src/routes/imagens.routes");
+
+app.use("/imagem", imagemRoutes);
 
 const eventosRoutes = require('./src/routes/eventos.routes');
 

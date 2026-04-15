@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -31,8 +25,7 @@ model Eventos {
   capacidade_maxima Int
   status            StatusEventos @default(ATIVO)
 
-  imagem    Imagem  @relation(fields: [imagemId], references: [id])
-  imagemId  Int
+  imagens   Imagem[]
 
   incricoes Incricoes[]
 }
@@ -61,12 +54,13 @@ enum StatusIncricao {
 }
 
 model Imagem {
-  id            Int        @id @default(autoincrement())
+  id            Int      @id @default(autoincrement())
   nomeOriginal  String
   nomeArquivo   String
   mimeType      String
   path          String
-  data          DateTime   @default(now())
+  data          DateTime @default(now())
 
-  eventos Eventos[]
+  eventoId Int
+  evento   Eventos @relation(fields: [eventoId], references: [id])
 }
