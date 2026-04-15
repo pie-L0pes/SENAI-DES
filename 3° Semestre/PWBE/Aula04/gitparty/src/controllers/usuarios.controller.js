@@ -40,12 +40,22 @@ const atualizar = async (req, res) => {
 
 const excluir = async (req, res) => {
     const { id } = req.params;
-    
-    const item = await prisma.usuarios.delete({
-        where: { id : Number(id) }
-    });
 
-    res.json(item).status(200).end();
+    try {
+        const item = await prisma.usuarios.delete({
+            where: { id: Number(id) }
+        });
+
+        return res.status(200).json(item);
+
+    } catch (error) {
+
+        if (error.code === 'P2003') {
+            return res.status(400).json({
+                erro: "Usuário possui registros vinculados."
+            });
+        }
+    }
 };
 
 module.exports = {

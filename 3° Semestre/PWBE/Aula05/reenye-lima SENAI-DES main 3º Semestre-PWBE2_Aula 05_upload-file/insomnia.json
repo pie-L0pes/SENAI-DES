@@ -1,0 +1,187 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-04-09T14:22:22.884Z",
+  "__export_source": "backend-aula",
+  "resources": [
+    {
+      "_id": "wrk_backend",
+      "_type": "workspace",
+      "name": "Backend Aula"
+    },
+    {
+      "_id": "fld_upload-file",
+      "_type": "request_group",
+      "parentId": "wrk_backend",
+      "name": "upload-file"
+    },
+    {
+      "_id": "fld_Publicacao",
+      "_type": "request_group",
+      "parentId": "fld_upload-file",
+      "name": "Publicacao"
+    },
+    {
+      "_id": "req_Publicacao_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Publicacao",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/publicacao/listar"
+    },
+    {
+      "_id": "req_Publicacao_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Publicacao",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/publicacao/buscar/:id"
+    },
+    {
+      "_id": "req_Publicacao_POST",
+      "_type": "request",
+      "parentId": "fld_Publicacao",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/publicacao/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"string\",\n  \"data\": \"2026-04-09T14:22:22.882Z\",\n  \"local\": \"string\",\n  \"descricao\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_Publicacao_PUT",
+      "_type": "request",
+      "parentId": "fld_Publicacao",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/publicacao/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"string\",\n  \"data\": \"2026-04-09T14:22:22.882Z\",\n  \"local\": \"string\",\n  \"descricao\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_Publicacao_DELETE",
+      "_type": "request",
+      "parentId": "fld_Publicacao",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/publicacao/excluir/:id"
+    },
+    {
+      "_id": "fld_Imagem",
+      "_type": "request_group",
+      "parentId": "fld_upload-file",
+      "name": "Imagem"
+    },
+    {
+      "_id": "req_Imagem_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Imagem",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/imagem/listar"
+    },
+    {
+      "_id": "req_Imagem_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Imagem",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/imagem/buscar/:id"
+    },
+    {
+      "_id": "req_Imagem_POST",
+      "_type": "request",
+      "parentId": "fld_Imagem",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/imagem/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nomeOriginal\": \"string\",\n  \"nomeArquivo\": \"string\",\n  \"mimeType\": \"string\",\n  \"path\": \"string\",\n  \"data\": \"2026-04-09T14:22:22.884Z\",\n  \"publicacoesId\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Imagem_PUT",
+      "_type": "request",
+      "parentId": "fld_Imagem",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/imagem/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nomeOriginal\": \"string\",\n  \"nomeArquivo\": \"string\",\n  \"mimeType\": \"string\",\n  \"path\": \"string\",\n  \"data\": \"2026-04-09T14:22:22.884Z\",\n  \"publicacoesId\": 0\n}"
+      }
+    },
+    {
+      "_id": "req_Imagem_DELETE",
+      "_type": "request",
+      "parentId": "fld_Imagem",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/imagem/excluir/:id"
+    }
+  ]
+}

@@ -31,6 +31,9 @@ model Eventos {
   capacidade_maxima Int
   status            StatusEventos @default(ATIVO)
 
+  imagem    Imagem  @relation(fields: [imagemId], references: [id])
+  imagemId  Int
+
   incricoes Incricoes[]
 }
 
@@ -55,4 +58,15 @@ enum StatusIncricao {
   CONFIRMADA
   LISTA_ESPERA
   CANCELADA
+}
+
+model Imagem {
+  id            Int        @id @default(autoincrement())
+  nomeOriginal  String
+  nomeArquivo   String
+  mimeType      String
+  path          String
+  data          DateTime   @default(now())
+
+  eventos Eventos[]
 }
