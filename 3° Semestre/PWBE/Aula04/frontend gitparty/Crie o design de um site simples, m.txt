@@ -1,0 +1,94 @@
+Crie o design de um site simples, moderno e organizado, apenas com o necessário, para uma empresa chamada “GitParty”, que organiza eventos. O objetivo do site é apresentar os eventos disponíveis e permitir o gerenciamento de inscrições de participantes de forma prática e intuitiva.
+
+O design deve ser simples, sem exageros visuais. Quero um visual clean, elegante e fácil de navegar.
+
+-Descrição do projeto
+
+A GitParty enfrenta problemas no controle manual de participantes, como:
+
+* excesso de inscritos em eventos;
+* usuários cadastrados mais de uma vez;
+* dificuldade em gerenciar cancelamentos;
+* organização da lista de espera.
+
+O sistema será responsável por:
+
+* cadastro de usuários;
+* gerenciamento de eventos;
+* gerenciamento de inscrições;
+* controle automático de vagas e lista de espera.
+
+- Público-alvo
+
+* estudantes de tecnologia;
+* desenvolvedores;
+* profissionais da área de TI;
+* pessoas interessadas em eventos tecnológicos.
+
+- Estilo visual
+
+O site deve ser simples, elegante e moderno.
+
+- Paleta de cores
+
+* azul escuro sofisticado como cor principal;
+* tons de azul secundários;
+* branco;
+* cinza claro para fundos;
+
+-Telas e elementos
+
+--1. Página Inicial
+
+* logo da GitParty;
+* menu de navegação;
+* banner principal com chamada para eventos;
+* seção mostrando próximos eventos;
+* cards de eventos;
+* botão “Inscrever-se”;
+* rodapé com contatos e redes sociais.
+
+-- 2. Tela de Login/Cadastro
+
+* campos de email e senha;
+* botão de login;
+* botão de cadastro;
+* opção “esqueci minha senha”.
+
+-- 3. Página de Eventos
+* lista de eventos;
+* cards com:
+
+  * título;
+  * descrição;
+  * data;
+  * local;
+  * quantidade de vagas;
+  * status do evento;
+  * botão de inscrição.
+
+-- 4. Painel Administrativo
+
+* menu lateral;
+* gerenciamento de usuários;
+* gerenciamento de eventos;
+* gerenciamento de inscrições;
+* tabela simples com dados;
+* botões de editar, excluir e criar.
+
+-- 5. Página de Detalhes do Evento
+
+* informações completas do evento;
+* descrição;
+* data e local;
+* vagas disponíveis;
+* status da inscrição;
+* botão de cancelar inscrição.
+
+- Regras de negócio que deve considerar
+
+* um evento não pode ultrapassar a capacidade máxima;
+* quando lotar, novos participantes entram automaticamente na lista de espera;
+* um usuário não pode se inscrever duas vezes no mesmo evento;
+* cancelamentos só podem ocorrer até 24 horas antes do evento;
+* quando alguém cancelar, o primeiro da lista de espera deve ser promovido automaticamente.
