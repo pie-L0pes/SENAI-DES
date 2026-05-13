@@ -29,7 +29,6 @@ const atualizar = async (req, res) => {
     const { id } = req.params;
     const dados = req.body;
 
-    // 🔥 ADICIONA ISSO
     if (dados.data_evento) {
         dados.data_evento = new Date(dados.data_evento);
     }
@@ -43,13 +42,27 @@ const atualizar = async (req, res) => {
 };
 
 const excluir = async (req, res) => {
+  try {
     const { id } = req.params;
-    
+
     const item = await prisma.eventos.delete({
-        where: { id : Number(id) }
+      where: { id: Number(id) }
     });
 
     res.status(200).json(item);
+
+  } catch (error) {
+
+    if (error.code === "P2003") {
+      return res.status(400).json({
+        erro: "Não é possível excluir esse evento, pois ele possui inscrições ou imagens."
+      });
+    }
+
+    res.status(500).json({
+      erro: "Erro ao excluir evento"
+    });
+  }
 };
 
 module.exports = {

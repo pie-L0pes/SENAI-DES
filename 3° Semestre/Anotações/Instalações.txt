@@ -1,19 +1,7 @@
-Instalações
-
-cors
-express
-mysql2
-dotenv
-nodemon
-
-npx nodemon //Para rodar
-
-
-npm i prisma
-npm install @prisma/cliente
-
-npx prisma init --datasource-provider mysql
-
-c
-
-npm i express cors dotenv @prisma/client @prisma/adapter-mariadb
+npm i -g backend-aula
+npx backend-aula ...
+npm install @prisma/client
+npx prisma generate
+npx prisma migrate dev
+npm rum dev
+npc -models
