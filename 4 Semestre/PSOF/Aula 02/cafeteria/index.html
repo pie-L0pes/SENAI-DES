@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu primeiro Projeto</title>
+  </head>
+  <body>
+    <header class = "cabecalho">
+      <div class = "container">
+        <span class = "etiqueta">Vite + JavaScript</span>
+        <h1>Meu primeiro projeto com Vite</h1>
+        <p>Um contador simples</p>
+      </div>
+    </header>
+    <main class = "container conteudo-principal">
+      <section class = "card" aria-labelledby="titulo-contador">
+        <h2 id ="titulo-contador">Contador</h2>
+        <p class = "descricao">Use os botões para mudar o valor</p>
+        
+        <div class="painel-valor">
+          <span>Valor atual</span>
+          <strong id="valor">0</strong>
+        </div>
+
+        <div class = "acoes">
+          <button id = "diminuir" class="botao botao-secundario" type="button">Diminuir</button>
+          <button id = "zerar" class="botao botao-neutro" type="button">Zerar</button>
+          <button id = "aumentar" class="botao botao-primario" type="button">Aumentar</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>SENAI/SESI Desenvolvimento de Sistemas 2026 &copy;</p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
